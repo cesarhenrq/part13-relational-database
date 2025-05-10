@@ -1,0 +1,16 @@
+### Get all blogs
+GET http://localhost:3001/api/blogs
+
+### Create a new blog
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Test Blog",
+  "author": "John Doe",
+  "url": "https://example.com/test-blog",
+  "likes": 5
+}
+
+### Delete a blog
+DELETE http://localhost:3001/api/blogs/1
