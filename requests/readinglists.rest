@@ -9,5 +9,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzd
     "userId": 1
 }
 
-### Get all blogs from the reading list
+### Update a reading list
+PUT http://localhost:3000/api/readinglists/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW9fdGVzdGVAdGVzdGUuY29tIiwiaWQiOjEsImlhdCI6MTc0NjkzMzc3MH0.yZoDN7gFdNW9GvvgFgwVWRhMyjYFO7sDLw8rUUwA75U
 
+{
+    "read": true
+}
