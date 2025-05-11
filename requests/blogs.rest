@@ -1,8 +1,8 @@
 ### Get all blogs
-GET http://localhost:3001/api/blogs
+GET http://localhost:3000/api/blogs
 
 ### Create a new blog
-POST http://localhost:3001/api/blogs
+POST http://localhost:3000/api/blogs
 Content-Type: application/json
 
 {
@@ -13,10 +13,10 @@ Content-Type: application/json
 }
 
 ### Delete a blog
-DELETE http://localhost:3001/api/blogs/2
+DELETE http://localhost:3000/api/blogs/2
 
 ### Update a blog
-PUT http://localhost:3001/api/blogs/3
+PUT http://localhost:3000/api/blogs/3
 Content-Type: application/json
 
 {

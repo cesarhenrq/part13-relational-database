@@ -1,0 +1,19 @@
+### Obter todos os usuários
+GET http://localhost:3000/api/users
+
+### Criar um novo usuário
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "usuario_teste",
+  "name": "Usuário de Teste"
+}
+
+### Atualizar um usuário
+PUT http://localhost:3000/api/users/usuario_teste
+Content-Type: application/json
+
+{
+  "username": "usuario_teste_atualizado"
+}
