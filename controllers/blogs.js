@@ -10,12 +10,8 @@ router.get("/", async (_req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  try {
-    const blog = await Blog.create(req.body);
-    res.json(blog);
-  } catch (error) {
-    return res.status(400).json({ error: error.message });
-  }
+  const blog = await Blog.create(req.body);
+  res.json(blog);
 });
 
 router.delete("/:id", blogFinder, async (req, res) => {
@@ -27,15 +23,12 @@ router.delete("/:id", blogFinder, async (req, res) => {
 });
 
 router.put("/:id", blogFinder, async (req, res) => {
-  try {
-    if (!req.blog) {
-      return res.status(404).end();
-    }
-    req.blog.likes = req.body.likes;
-    await req.blog.save();
-    res.json(req.blog);
-  } catch (error) {
-    return res.status(400).json({ error: error.message });
+  if (!req.blog) {
+    return res.status(404).end();
   }
+  req.blog.likes = req.body.likes;
+  await req.blog.save();
+  res.json(req.blog);
 });
+
 module.exports = router;
