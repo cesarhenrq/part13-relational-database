@@ -2,6 +2,7 @@
 GET http://localhost:3000/api/blogs
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW9fdGVzdGVAdGVzdGUuY29tIiwiaWQiOjEsImlhdCI6MTc0NjkzMzc3MH0.yZoDN7gFdNW9GvvgFgwVWRhMyjYFO7sDLw8rUUwA75U
 
+
 ### Create a new blog
 POST http://localhost:3000/api/blogs
 Content-Type: application/json
