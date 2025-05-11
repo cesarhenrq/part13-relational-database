@@ -6,12 +6,12 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "username": "usuario_teste",
+  "username": "usuario_teste@teste.com",
   "name": "Usuário de Teste"
 }
 
 ### Atualizar um usuário
-PUT http://localhost:3000/api/users/usuario_teste
+PUT http://localhost:3000/api/users/usuario_teste_atualizado@teste.com
 Content-Type: application/json
 
 {
