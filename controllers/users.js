@@ -12,7 +12,6 @@ router.get("/", async (_req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(req.body);
   const user = await User.create(req.body);
   res.json(user);
 });
