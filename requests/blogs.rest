@@ -15,11 +15,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzd
 }
 
 ### Delete a blog
-DELETE http://localhost:3000/api/blogs/2
+DELETE http://localhost:3000/api/blogs/6
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW9fdGVzdGVAdGVzdGUuY29tIiwiaWQiOjYsImlhdCI6MTc0NjkyNzM2MX0.NLrUZyezeE68GYYTYxR-ar5a9vai3MBMw57gWoUG_es
 
 ### Update a blog
-PUT http://localhost:3000/api/blogs/3
+PUT http://localhost:3000/api/blogs/6
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW9fdGVzdGVAdGVzdGUuY29tIiwiaWQiOjYsImlhdCI6MTc0NjkyNzM2MX0.NLrUZyezeE68GYYTYxR-ar5a9vai3MBMw57gWoUG_es
 
