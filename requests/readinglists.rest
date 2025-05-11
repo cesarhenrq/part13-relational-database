@@ -5,7 +5,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW9fdGVzdGVAdGVzdGUuY29tIiwiaWQiOjEsImlhdCI6MTc0NjkzMzc3MH0.yZoDN7gFdNW9GvvgFgwVWRhMyjYFO7sDLw8rUUwA75U
 
 {
-    "blogId": 1,
+    "blogId": 2,
     "userId": 1
 }
 

@@ -30,8 +30,8 @@ Blog.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isAfter: 1991,
-        isBefore: new Date().getFullYear(),
+        min: 1991,
+        max: new Date().getFullYear(),
       },
     },
   },

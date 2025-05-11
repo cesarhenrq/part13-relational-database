@@ -1,4 +1,5 @@
 const errorHandler = (error, _request, response, _next) => {
+  console.log({ error });
   console.error(`Error: ${error.name}`);
   console.error(`Message: ${error.message}`);
 

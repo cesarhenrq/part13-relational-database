@@ -11,8 +11,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzd
   "title": "Test Blog",
   "author": "Jhonny Cash",
   "url": "https://example.com/test-blog",
-  "likes": 5,
-  "year": 2025
+  "year": 1992
 }
 
 ### Delete a blog

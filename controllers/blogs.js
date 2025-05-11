@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { Blog, User } = require("../models");
+const { Blog, User, ReadingList } = require("../models");
 
 const { blogFinder } = require("../middlewares");
 
@@ -31,17 +31,43 @@ router.get("/", async (req, res) => {
   res.json(blogs);
 });
 
+// Nova rota para buscar um blog específico com seus readinglists
+router.get("/:id", async (req, res) => {
+  const blog = await Blog.findByPk(req.params.id, {
+    attributes: {
+      exclude: ["userId"],
+    },
+    include: [
+      {
+        model: User,
+        attributes: ["username", "name"],
+      },
+      {
+        model: User,
+        as: "users",
+        attributes: ["id", "username", "name"],
+        through: {
+          model: ReadingList,
+          as: "readinglists",
+          attributes: ["id", "read"],
+        },
+      },
+    ],
+  });
+
+  if (!blog) {
+    return res.status(404).json({ error: "Blog not found" });
+  }
+
+  res.json(blog);
+});
+
 router.post("/", async (req, res) => {
   const user = await User.findByPk(req.decodedToken.id);
-  console.log({
-    ...req.body,
-    userId: user.id,
-    year: String(req.body.year),
-  });
+
   const blog = await Blog.create({
     ...req.body,
     userId: user.id,
-    year: 1992,
   });
   res.json(blog);
 });
