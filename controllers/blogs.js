@@ -9,7 +9,12 @@ const Op = require("sequelize").Op;
 router.get("/", async (req, res) => {
   let where = {};
   if (req.query.search) {
-    where.title = { [Op.iLike]: `%${req.query.search}%` };
+    where = {
+      [Op.or]: [
+        { title: { [Op.iLike]: `%${req.query.search}%` } },
+        { author: { [Op.iLike]: `%${req.query.search}%` } },
+      ],
+    };
   }
 
   const blogs = await Blog.findAll({
