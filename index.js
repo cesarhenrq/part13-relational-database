@@ -11,6 +11,7 @@ const {
   usersRouter,
   loginRouter,
   authorsRouter,
+  readinglistsRouter,
 } = require("./controllers");
 
 app.use(express.json());
@@ -19,7 +20,7 @@ app.use("/api/blogs", tokenExtractor, blogsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/authors", authorsRouter);
-
+app.use("/api/readinglists", readinglistsRouter);
 app.use(errorHandler);
 
 const start = async () => {

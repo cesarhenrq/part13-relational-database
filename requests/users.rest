@@ -17,3 +17,7 @@ Content-Type: application/json
 {
   "username": "usuario_teste_atualizado"
 }
+
+### Get a user by id
+GET http://localhost:3000/api/users/1
+
