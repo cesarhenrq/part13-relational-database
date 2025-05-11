@@ -6,12 +6,19 @@ const { PORT } = require("./util/config");
 const { connectToDatabase } = require("./util/db");
 const { errorHandler, tokenExtractor } = require("./middlewares");
 
-const { blogsRouter, usersRouter, loginRouter } = require("./controllers");
+const {
+  blogsRouter,
+  usersRouter,
+  loginRouter,
+  authorsRouter,
+} = require("./controllers");
+
 app.use(express.json());
 
 app.use("/api/blogs", tokenExtractor, blogsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
+app.use("/api/authors", authorsRouter);
 
 app.use(errorHandler);
 
