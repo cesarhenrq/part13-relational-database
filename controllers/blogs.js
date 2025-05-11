@@ -33,11 +33,15 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const user = await User.findByPk(req.decodedToken.id);
-  console.log(req.body);
-  const blog = await Blog.create({
+  console.log({
     ...req.body,
     userId: user.id,
     year: String(req.body.year),
+  });
+  const blog = await Blog.create({
+    ...req.body,
+    userId: user.id,
+    year: 1992,
   });
   res.json(blog);
 });
